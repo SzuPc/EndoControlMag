@@ -526,13 +526,19 @@
   </div>
 </section>
 
-
 <style>
   /* 针对特定部分的视频调整大小 */
   .specific-video-container video {
-  width: 100%; /* 视频宽度占满列宽 */
-  height: auto; /* 高度自动调整，保持比例 */
-}
+    width: 100%; /* 视频宽度占满列宽 */
+    height: auto; /* 高度自动调整，保持比例 */
+    object-fit: cover;
+  }
+
+  /* 移除列间距 */
+  .columns.is-gapless {
+    margin-left: 0;
+    margin-right: 0;
+  }
 </style>
 
 <section class="hero is-small">
@@ -540,7 +546,7 @@
     <div class="container">
       <h2 class="title is-3 has-text-centered"></h2>
       <!-- Row 1: 6 Videos -->
-      <div class="columns is-centered is-multiline">
+      <div class="columns is-centered is-multiline is-gapless">
         <!-- 前三个视频的小标题 -->
         <div class="column is-full has-text-centered">
           <h4 class="subtitle is-4">Occlusion</h4>
@@ -566,10 +572,6 @@
           </video>
           <h3 class="subtitle">FlowMag</h3>
         </div>
-        <!-- 后三个视频的小标题 -->
-        <div class="column is-full has-text-centered">
-          <h4 class="subtitle is-4">Tool Disturbance</h4>
-        </div>
         <div class="column is-one-sixth has-text-centered video-container specific-video-container">
           <video poster="PATH_TO_VIDEO4_POSTER" id="video4" autoplay muted loop>
             <source src="github_video/challeneg_finial/tool_disturbance/endocontrolmag_distance/工具操作_x4_update_4_track_math.mp4" type="video/mp4">
@@ -592,9 +594,7 @@
           <h3 class="subtitle">FlowMag</h3>
         </div>
       </div>
-      <!-- Row 2: 6 Videos -->
-      <div class="columns is-centered is-multiline">
-        <!-- 前三个视频的小标题 -->
+      <div class="columns is-centered is-multiline is-gapless">
         <div class="column is-full has-text-centered">
           <h4 class="subtitle is-4">Vessel Deformation</h4>
         </div>
@@ -618,10 +618,6 @@
             Your browser does not support the video tag.
           </video>
           <h3 class="subtitle">FlowMag</h3>
-        </div>
-        <!-- 后三个视频的小标题 -->
-        <div class="column is-full has-text-centered">
-          <h4 class="subtitle is-4">View Change</h4>
         </div>
         <div class="column is-one-sixth has-text-centered video-container specific-video-container">
           <video poster="PATH_TO_VIDEO10_POSTER" id="video10" autoplay muted loop>
