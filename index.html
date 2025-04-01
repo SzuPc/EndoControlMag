@@ -525,13 +525,24 @@
     </div>
   </div>
 </section>
-
 <style>
   /* 针对特定部分的视频调整大小 */
   .specific-video-container video {
     width: 100%; /* 视频宽度占满列宽 */
     height: auto; /* 高度自动调整，保持比例 */
     object-fit: cover;
+  }
+
+  /* 视频容器的间距 */
+  .specific-video-container {
+    padding: 10px; /* 每个视频容器周围添加间距 */
+  }
+
+  /* 调整标题大小 */
+  .specific-video-container h3 {
+    font-size: 0.9rem; /* 调整标题字体大小 */
+    margin-top: 5px; /* 标题与视频之间的间距 */
+    text-align: center; /* 标题居中 */
   }
 
   /* 移除列间距 */
@@ -544,13 +555,9 @@
 <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
-      <h2 class="title is-3 has-text-centered"></h2>
+      <h2 class="title is-3 has-text-centered">Video Section</h2>
       <!-- Row 1: 6 Videos -->
-      <div class="columns is-centered is-multiline is-gapless">
-        <!-- 前三个视频的小标题 -->
-        <div class="column is-full has-text-centered">
-          <h4 class="subtitle is-4">Occlusion</h4>
-        </div>
+      <div class="columns is-centered is-multiline">
         <div class="column is-one-sixth has-text-centered video-container specific-video-container">
           <video poster="PATH_TO_VIDEO1_POSTER" id="video1" autoplay muted loop>
             <source src="github_video/challeneg_finial/occlusion/endocontrolmag_distance/工具移动纱布遮挡_x4_update_4_track_math.mp4" type="video/mp4">
@@ -594,56 +601,78 @@
           <h3 class="subtitle">FlowMag</h3>
         </div>
       </div>
-      <div class="columns is-centered is-multiline is-gapless">
-        <div class="column is-full has-text-centered">
-          <h4 class="subtitle is-4">Vessel Deformation</h4>
-        </div>
-        <div class="column is-one-sixth has-text-centered video-container specific-video-container">
-          <video poster="PATH_TO_VIDEO7_POSTER" id="video7" autoplay muted loop>
-            <source src="github_video/challeneg_finial/vessel_deformation/endocontrolmag_distance/工具移动牵拉组织_x4_update_4_track_math.mp4" type="video/mp4">
+    </div>
+  </div>
+</section>
+
+
+<style>
+  /* 针对特定部分的视频调整大小 */
+  .specific-video-container-5 video {
+    width: 100%; /* 视频宽度占满列宽 */
+    height: auto; /* 高度自动调整，保持比例 */
+    object-fit: cover;
+  }
+
+  /* 视频容器的间距 */
+  .specific-video-container-5 {
+    padding: 10px; /* 每个视频容器周围添加间距 */
+  }
+
+  /* 移除列间距 */
+  .columns.is-gapless-5 {
+    margin-left: 0;
+    margin-right: 0;
+  }
+</style>
+
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3 has-text-centered">New Video Section</h2>
+      <!-- Row: 5 Videos -->
+      <div class="columns is-centered is-gapless">
+        <div class="column is-one-fifth has-text-centered video-container-5 specific-video-container-5">
+          <video poster="PATH_TO_VIDEO1_POSTER" id="video1" autoplay muted loop>
+            <source src="github_video/diff_mag/正常_x2_update_4_exp.mp4" type="video/mp4">
             Your browser does not support the video tag.
           </video>
-          <h3 class="subtitle">EndoControlMag(Distance)</h3>
+          <h3 class="subtitle">Video 1</h3>
         </div>
-        <div class="column is-one-sixth has-text-centered video-container specific-video-container">
-          <video poster="PATH_TO_VIDEO8_POSTER" id="video8" autoplay muted loop>
-            <source src="github_video/challeneg_finial/vessel_deformation/endocontrolmag_flow/工具移动牵拉组织_x4_update_4_track_flow.mp4" type="video/mp4">
+        <div class="column is-one-fifth has-text-centered video-container-5 specific-video-container-5">
+          <video poster="PATH_TO_VIDEO2_POSTER" id="video2" autoplay muted loop>
+            <source src="github_video/diff_mag/正常_x4_update_4_exp.mp4" type="video/mp4">
             Your browser does not support the video tag.
           </video>
-          <h3 class="subtitle">EndoControlMag(Motion)</h3>
+          <h3 class="subtitle">Video 2</h3>
         </div>
-        <div class="column is-one-sixth has-text-centered video-container specific-video-container">
-          <video poster="PATH_TO_VIDEO9_POSTER" id="video9" autoplay muted loop>
-            <source src="github_video/challeneg_finial/vessel_deformation/flowmag/工具移动牵拉组织_x4_soft_25.mp4" type="video/mp4">
+        <div class="column is-one-fifth has-text-centered video-container-5 specific-video-container-5">
+          <video poster="PATH_TO_VIDEO3_POSTER" id="video3" autoplay muted loop>
+            <source src="github_video/diff_mag/正常_x8_update_4_exp.mp4" type="video/mp4">
             Your browser does not support the video tag.
           </video>
-          <h3 class="subtitle">FlowMag</h3>
+          <h3 class="subtitle">Video 3</h3>
         </div>
-        <div class="column is-one-sixth has-text-centered video-container specific-video-container">
-          <video poster="PATH_TO_VIDEO10_POSTER" id="video10" autoplay muted loop>
-            <source src="github_video/challeneg_finial/view_change/endocontrolmag_distance/血管消失后再现_x4_update_4_track_math.mp4" type="video/mp4">
+        <div class="column is-one-fifth has-text-centered video-container-5 specific-video-container-5">
+          <video poster="PATH_TO_VIDEO4_POSTER" id="video4" autoplay muted loop>
+            <source src="github_video/diff_mag/正常_x16_update_4_exp.mp4" type="video/mp4">
             Your browser does not support the video tag.
           </video>
-          <h3 class="subtitle">EndoControlMag(Distance)</h3>
+          <h3 class="subtitle">Video 4</h3>
         </div>
-        <div class="column is-one-sixth has-text-centered video-container specific-video-container">
-          <video poster="PATH_TO_VIDEO11_POSTER" id="video11" autoplay muted loop>
-            <source src="github_video/challeneg_finial/view_change/endocontrolmag_flow/血管消失后再现_x4_update_4_track_flow.mp4" type="video/mp4">
+        <div class="column is-one-fifth has-text-centered video-container-5 specific-video-container-5">
+          <video poster="PATH_TO_VIDEO5_POSTER" id="video5" autoplay muted loop>
+            <source src="github_video/diff_mag/正常_x32_update_4_exp.mp4" type="video/mp4">
             Your browser does not support the video tag.
           </video>
-          <h3 class="subtitle">EndoControlMag(Motion)</h3>
-        </div>
-        <div class="column is-one-sixth has-text-centered video-container specific-video-container">
-          <video poster="PATH_TO_VIDEO12_POSTER" id="video12" autoplay muted loop>
-            <source src="github_video/challeneg_finial/view_change/flowmag/血管消失后再现_x4_soft_25.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-          <h3 class="subtitle">FlowMag</h3>
+          <h3 class="subtitle">Video 5</h3>
         </div>
       </div>
     </div>
   </div>
 </section>
+
+
 
 <!-- End video section -->
 
