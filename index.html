@@ -528,8 +528,8 @@
 <style>
   /* 针对特定部分的视频调整大小 */
   .specific-video-container video {
-    width: 220px; /* 视频宽度占满列宽 */
-    height: 100px; /* 高度自动调整，保持比例 */
+    width: 230px; /* 视频宽度占满列宽 */
+    height: 120px; /* 高度自动调整，保持比例 */
     object-fit: cover;
   }
 
@@ -547,8 +547,9 @@
 
   /* 场景标题样式 */
   .scene-title {
-    margin-bottom: 15px;
-    grid-column: span 6; /* 跨越6列 */
+    grid-column: span 3; /* 每个标题跨越3列 */
+    text-align: center;
+    margin-bottom: 10px;
   }
 
   /* 使用CSS Grid布局 */
@@ -578,7 +579,7 @@
       
       <!-- 第一行：Occlusion和Tool Disturbance -->
       <div class="video-grid">
-        <div class="scene-title">
+        <div class="scene-title" style="grid-column: 1 / span 3;">
           <h4 class="subtitle is-4">Occlusion</h4>
         </div>
         <div class="scene-title" style="grid-column: 4 / span 3;">
@@ -632,7 +633,7 @@
 
       <!-- 第二行：Vessel Deformation和View Change -->
       <div class="video-grid">
-        <div class="scene-title">
+        <div class="scene-title" style="grid-column: 1 / span 3;">
           <h4 class="subtitle is-4">Vessel Deformation</h4>
         </div>
         <div class="scene-title" style="grid-column: 4 / span 3;">
