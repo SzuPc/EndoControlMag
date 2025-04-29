@@ -1,4 +1,4 @@
 # EndoControlMag Page
 
 
--  https://szupc.github.io/CUHK_EndoControlMag.github.io/
+-  [https://szupc.github.io/CUHK_EndoControlMag/](https://szupc.github.io/CUHK_EndoControlMag/)
