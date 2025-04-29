@@ -24,7 +24,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-  <title>EndoControlMag: Robust Endoscopic Vascular Motion Magnification with Adaptive Reference Frames and Dual-Mask Control</title>
+  <title>EndoControlMag: Robust Endoscopic Vascular Motion Magnification with Periodic Reference Resetting and Hierarchical Tissue-aware Dual-Mask Control</title>
   <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
   rel="stylesheet">
@@ -167,35 +167,9 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Visualizing subtle vascular motions in endoscopic
-            robotic surgery is crucial for enhancing surgical precision and
-            decision-making, yet it remains challenging due to the complex
-            and dynamic nature of surgical scenes. This paper introduces
-            EndoControlMag, a training-free, Lagrangian-based motion mag-
-            nification paradigm to achieve robust and mask-conditioned
-            vascular motion magnification. The framework features two
-            novel components: a Dynamic Reference Frame Management
-            scheme, which divides the video into short clips and dynamically
-            updates reference frames to optimize motion representation
-            while maintaining computational efficiency, and a Dual-Mask
-            Magnification framework, which refines the magnification process
-            by incorporating both inner and outer regions of the vessel mask.
-            The inner region, tracked using a pre-trained model, avoids
-            magnification mismatches due to occlusions and view changes.
-            The outer region undergoes softened dilation to account for
-            passive neighboring tissue motion induced by vascular pulsa-
-            tion, resulting in a smooth transition of magnification strength
-            across the tissue. This approach effectively reduces noise and
-            accommodates the deformable properties of endoscopic tissues.
-            We evaluate our approach on diverse endoscopic videos from four
-            different surgery types, including challenging scenarios such as
-            instrument occlusion and significant view shifts. The experimen-
-            tal results highlight the robustness and efficacy of our method in
-            enhancing subtle vascular motions while preserving visual clarity.
-            This is validated both qualitatively and quantitatively through
-            image quality metrics and magnification error metrics. The code,
-            dataset, and video results can be accessed at the project website
-            at https://szupc.github.io/CUHK_EndoControlMag.github.io/
+            Visualizing subtle vascular motions in endoscopic robotic surgery is crucial for surgical precision and decision-making, yet remains challenging due to the complex and dynamic nature of surgical scenes. To address this, we introduce <em>EndoControlMag</em>, a training-free, Lagrangian-based framework with mask-conditioned vascular motion magnification tailored to endoscopic environments. Our approach features two key modules: a <em>Periodic Reference Resetting (PRR)</em> scheme that divides videos into short overlapping clips with dynamically updated reference frames to prevent error accumulation while maintaining temporal coherence, and a <em>Hierarchical Tissue-aware Magnification (HTM)</em> framework with dual-mode mask dilation. HTM first tracks vessel cores using a pretrained visual tracking model to maintain accurate localization despite occlusions and view changes. It then applies one of two adaptive softening strategies to surrounding tissues: motion-based softening that modulates magnification strength proportional to observed tissue displacement, or distance-based exponential decay that simulates biomechanical force attenuation. This dual-mode approach accommodates diverse surgical scenarios—motion-based softening excels with complex tissue deformations while distance-based softening provides stability during unreliable optical flow conditions.
+            We evaluate EndoControlMag on our <em>EndoVMM24</em> dataset spanning four different surgery types and various challenging scenarios, including instrument occlusions, view changes, and vessel deformations.
+            Quantitative metrics, visual assessments, and expert surgeon evaluations demonstrate that EndoControlMag significantly outperforms existing methods in both magnification accuracy and visual quality while maintaining robustness across challenging surgical conditions.
             </p>
         </div>
       </div>
@@ -204,6 +178,20 @@
 </section>
 <!-- End paper abstract -->
 
+<!-- Graphical Abstract -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full has-text-centered">
+        <h2 class="title is-3">Graphical Abstract</h2>
+        <div class="content">
+          <img src="static/images/Graphical_abstract.png" alt="Graphical abstract of our EndoControlMag." style="max-width: 80%; height: auto; margin: auto; display: block;">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Graphical Abstract -->
 
 <!-- Image carousel -->
  <!--
